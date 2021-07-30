@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Write Your Answer</title>
+</head>
+<style>
+body {
+  background-image: url('https://cutewallpaper.org/21/wallpaper-quiz/What-Should-My-Desktop-Background-Be-Quiz-Wallpapers-Sinaga.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+<form action="store.php">
+<?php
+$email=$_GET['email'];
+$psw=$_GET['pass'];
+$flag=0;
+$s=array();
+$file = fopen("details.txt", 'r');
+while(!feof($file))
+  {
+  $s=fgets($file);
+  $str_arr = array_pad(explode('::', $s),4,null);
+  if ($str_arr[1]==$psw and $str_arr[2]==$email){
+		$ques_num=(($str_arr[3])%20) + 1;
+		echo "Authorized User"."<br>";
+                echo "Your Job Application number is ".$str_arr[3]."<br><br>";
+                echo "<center><h2>".file_get_contents( "questions/".$ques_num.".txt" )."</h2></center>" ;
+		
+?>
+<center>
+<form >
+<table border=1>
+<tr>
+<td>Choose Your Programming Language
+<td>
+<select name="lang">
+<option value=".java">Java</option>
+<option value=".py">Python</option>
+</select>
+
+</tr>
+<tr>
+<td colspan=2><textarea name="prog" rows=50 cols=150></textarea>
+</tr>
+<tr>
+<td colspan=2 align=center><input type=submit value="submit">
+</tr>
+</table>
+</form>
+<center>
+<?php
+		$flag=1;
+	  	break;
+	}//end if 
+  }//end while
+if ($flag==0)
+	echo "Please register before login";
+fclose($file);
+?>
+</form>
+</body>
+</html>

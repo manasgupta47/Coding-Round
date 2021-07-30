@@ -1,0 +1,13 @@
+Aditya::12345::aditya@gmail.com::1000::
+Manas::12345::manas@gmail.com::1001::
+Raman::12345::raman@gmail.com::1002::
+Abhishek::12345::abhishek@gmail.com::1003::
+::::::::
+::::::1::
+::::::2::
+::::::3::
+dad::dad::abhi@singh.com::4::
+manas1::1234::manas1@gmail.com::5::
+abhi::1234::Abhi@gmail.com::6::
+om::123::om@gmail.com::7::
+kishan::1234::ki@gmail.com::8::

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Login Here</title>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div style="background-image: url('https://mcdn.wallpapersafari.com/medium/23/30/IpcZNP.jpg');">
+	<!--form area start-->
+	<div class="form">
+		<!--login form start-->
+
+		<form class="login-form" action="validate.php" method="post">
+			<i class="fas fa-user-circle"></i>
+			<input class="user-input" type="email" name="email" placeholder="Email Address" required>
+			<input class="user-input" type="password" name="pass" placeholder="Password" required>
+			<input class="btn" type="submit" name="" value="LOGIN">
+			<div class="options-02">
+				<p>Not Registered? <a href="#">Create an Account</a></p>
+			</div>
+		</form>
+		<!--login form end-->
+		<!--signup form start-->
+		<form class="signup-form" action="store.php" method="post">
+			<i class="fas fa-user-plus"></i>
+			<input class="user-input" type="text" name="name" placeholder="Username" required>
+			<input class="user-input" type="email" name="email" placeholder="Email Address" required>
+			<input placeholder="Password" class="user-input" name="pass" id="password" type="password" onkeyup='check();' />
+			<input placeholder="Confirm Password" class="user-input" type="password" name="confirm_password" id="confirm_password" onkeyup='check();' />
+			<span id='message'></span>
+
+			<input class="btn" type="submit" name="" value="SIGN UP">
+			<div class="options-02">
+				<p>Already Registered? <a href="#">Sign In</a></p>
+			</div>
+		</form>
+		<!--signup form end-->
+	</div>
+	<!--form area end-->
+	<script type="text/javascript">
+		$('.options-02 a').click(function() {
+			$('form').animate({
+				height: "toggle",
+				opacity: "toggle"
+			}, "slow");
+		});
+	</script>
+
+	<script src="myscripts.js"></script>
+</body>
+
+</html>
