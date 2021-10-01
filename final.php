@@ -26,5 +26,6 @@ echo "Your response is recorded successfully";
 ?>
 <body>
 <p class="sign" align="center"><u><a href="second.html"><mark>Logout Now!</mark></p></u>
+  <p></p>
 </body>
 </html>
